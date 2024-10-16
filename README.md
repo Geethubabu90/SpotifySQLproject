@@ -113,6 +113,7 @@ FROM Spotify
 GROUP BY 1
 ORDER BY 2 DESC;
        ```
+       
 2. **Find the top 5 tracks with the highest energy values.**
  
   ```Solution
@@ -124,6 +125,7 @@ Group by 1
 ORDER BY 2 DESC
 LIMIT 5;
      ```
+
 3. **List all tracks along with their views and likes where `official_video = TRUE'.**
  
  ```Solution
@@ -137,6 +139,7 @@ SELECT
  Order by 2 desc
  Limit 10;
  ```
+
 4.**For each album, calculate the total views of all associated tracks.**
  
  ```Solution
@@ -148,6 +151,7 @@ SELECT
 	  Group by 1,2
 	  ORDER BY 3 DESC;
  ```
+
 5. **Retrieve the track names that have been streamed on Spotify more than YouTube.**
  
  ```Solution
@@ -180,6 +184,7 @@ FROM (
 WHERE rank <= 3
 ORDER BY artist, rank;
  ```
+
 2. **Write a query to find tracks where the liveness score is above the average.**
  
  ```Solution
@@ -187,6 +192,7 @@ SELECT artist, track,liveness
 FROM spotify
 WHERE liveness > (SELECT AVG(liveness) FROM Spotify);
  ```
+
 3. **Use a `WITH` clause to calculate the difference between the highest and lowest energy values for tracks in each album.**
 
 ```sql
