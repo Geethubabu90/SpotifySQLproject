@@ -70,30 +70,38 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
 
 ### Easy Level
 1. **Retrieve the names of all tracks that have more than 1 billion streams.**
+
    ```Solution
    SELECT * FROM Spotify
-     WHERE stream > 1000000000;   ```
-2. **List all albums along with their respective artists.**
+     WHERE stream > 1000000000;
+   ```
+   
+3. **List all albums along with their respective artists.**
+
     ```Solution
 SELECT 
    DISTINCT album, artist
 FROM Spotify
-ORDER BY 1; ```
+ORDER BY 1;
+```
 
-3. **Get the total number of comments for tracks where `licensed = TRUE`.**
+3. **Get the total number of comments for tracks where licensed = TRUE.**
 
   ```Solution
 SELECT 
     SUM(comments) as total_no_comments
 FROM Spotify
-WHERE licensed = 'true';  ```
+WHERE licensed = 'true';
+ ```
 
 4. **Find all tracks that belong to the album type `single`.**
+
     ```Solution
 SELECT 
     track, album_type FROM Spotify
 WHERE album_type = 'single';
      ```
+     
 5. **Count the total number of tracks by each artist.**
 
   ```Solution
@@ -212,13 +220,13 @@ FROM cte
 ORDER BY 2 DESC
 ```
    
-5.**Find tracks where the energy-to-liveness ratio is greater than 1.2.**
+4.**Find tracks where the energy-to-liveness ratio is greater than 1.2.**
    ```Solution
 SELECT track, energy_liveness
 FROM Spotify
 WHERE (energy_liveness) > 1.2;
    ```
-7. **Calculate the cumulative sum of likes for tracks ordered by the number of views, using window functions.**
+5. **Calculate the cumulative sum of likes for tracks ordered by the number of views, using window functions.**
  
  ```Solution
 SELECT artist, track, views, likes,
