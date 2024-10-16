@@ -74,25 +74,25 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
    ```Solution
    SELECT * FROM Spotify
      WHERE stream > 1000000000;
-   ```
+     ```
    
-3. **List all albums along with their respective artists.**
+2. **List all albums along with their respective artists.**
 
     ```Solution
 SELECT 
    DISTINCT album, artist
 FROM Spotify
 ORDER BY 1;
-```
+ ```
 
-3. **Get the total number of comments for tracks where licensed = TRUE.**
+3.** Get the total number of comments for tracks where licensed = TRUE. **
 
   ```Solution
 SELECT 
     SUM(comments) as total_no_comments
 FROM Spotify
 WHERE licensed = 'true';
- ```
+```
 
 4. **Find all tracks that belong to the album type `single`.**
 
@@ -100,7 +100,7 @@ WHERE licensed = 'true';
 SELECT 
     track, album_type FROM Spotify
 WHERE album_type = 'single';
-     ```
+```
      
 5. **Count the total number of tracks by each artist.**
 
@@ -109,7 +109,7 @@ SELECT
    artist , COUNT(*) as total_no_track
 FROM Spotify
 GROUP BY artist;
-  ```
+```
 ### Medium Level
 1. **Calculate the average danceability of tracks in each album.**
 
@@ -120,7 +120,7 @@ GROUP BY artist;
 FROM Spotify
 GROUP BY 1
 ORDER BY 2 DESC;
-       ```
+```
        
 2. **Find the top 5 tracks with the highest energy values.**
  
@@ -132,7 +132,7 @@ FROM Spotify
 Group by 1
 ORDER BY 2 DESC
 LIMIT 5;
-     ```
+```
 
 3. **List all tracks along with their views and likes where `official_video = TRUE'.**
  
@@ -199,7 +199,7 @@ ORDER BY artist, rank;
 SELECT artist, track,liveness
 FROM spotify
 WHERE liveness > (SELECT AVG(liveness) FROM Spotify);
- ```
+```
 
 3. **Use a `WITH` clause to calculate the difference between the highest and lowest energy values for tracks in each album.**
 
@@ -225,7 +225,7 @@ ORDER BY 2 DESC
 SELECT track, energy_liveness
 FROM Spotify
 WHERE (energy_liveness) > 1.2;
-   ```
+```
 5. **Calculate the cumulative sum of likes for tracks ordered by the number of views, using window functions.**
  
  ```Solution
@@ -233,7 +233,7 @@ SELECT artist, track, views, likes,
        SUM(likes) OVER (ORDER BY views) AS cumulative_likes
 FROM Spotify
 ORDER BY views;
- ```
+```
 
 Here’s an updated section for your **Spotify Advanced SQL Project and Query Optimization** README, focusing on the query optimization task you performed. You can include the specific screenshots and graphs as described.
 
