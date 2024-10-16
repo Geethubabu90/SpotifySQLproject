@@ -78,8 +78,7 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
 SELECT 
    DISTINCT album, artist
 FROM Spotify
-ORDER BY 1;  
-```
+ORDER BY 1; ```
 
 3. **Get the total number of comments for tracks where `licensed = TRUE`.**
 
