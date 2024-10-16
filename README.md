@@ -70,22 +70,19 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
 
 ### Easy Level
 1. **Retrieve the names of all tracks that have more than 1 billion streams.**
-
    ```Solution
    SELECT * FROM Spotify
      WHERE stream > 1000000000;
      ```
    
 2. **List all albums along with their respective artists.**
-
-    ```Solution
+ ```Solution
 SELECT 
    DISTINCT album, artist
 FROM Spotify
 ORDER BY 1;
- ```
-
-3.** Get the total number of comments for tracks where licensed = TRUE. **
+```
+3.**Get the total number of comments for tracks where licensed = TRUE.**
 
   ```Solution
 SELECT 
@@ -96,7 +93,7 @@ WHERE licensed = 'true';
 
 4. **Find all tracks that belong to the album type `single`.**
 
-    ```Solution
+  ```Solution
 SELECT 
     track, album_type FROM Spotify
 WHERE album_type = 'single';
