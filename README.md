@@ -110,7 +110,7 @@ GROUP BY artist;
 ### Medium Level
 1. **Calculate the average danceability of tracks in each album.**
 
-    ```Solution
+ ```Solution
  SELECT 
 	album,
 	avg(danceability) as avg_danceability
@@ -118,9 +118,9 @@ FROM Spotify
 GROUP BY 1
 ORDER BY 2 DESC;
 ```
-       
+
 2. **Find the top 5 tracks with the highest energy values.**
- 
+  
   ```Solution
 SELECT  
     track, 
@@ -131,8 +131,9 @@ ORDER BY 2 DESC
 LIMIT 5;
 ```
 
-3. **List all tracks along with their views and likes where `official_video = TRUE'.**
- 
+   
+
+ 3. **List all tracks along with their views and likes where `official_video = TRUE'.**
  ```Solution
 SELECT 
     track,
